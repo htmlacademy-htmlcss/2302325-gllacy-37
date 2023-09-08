@@ -1,12 +1,202 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
-  </head>
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин мороженного Глейси</title>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <a class="header-logo" href="index.html" aria-current="page">
+          <img src="images/logo.svg" alt="Логотип «Глейси»." width="137" height="55.716">
+        </a>
+
+        <nav class="menu">
+          <ul class="menu-list list-reset">
+            <li class="menu-item menu-item-catalog menu-item-catalog-active">
+              <a class="menu-link" href="#">Каталог
+                <span class="menu-arrow"></span>
+              </a>
+
+              <div class="submenu">
+
+              </div>
+
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="#">О компании</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="user-menu">
+          <a class="phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          <ul class="user-list list-reset">
+            <li class="user-item">
+              <a class="user-link" href="#">
+                <span class="search">Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="user-item">
+              <a class="user-link" href="#">Вход
+                <span class="enter"></span>
+              </a>
+            </li>
+            <li class="user-item">
+              <a class="user-link" href="#">Корзина
+                <span class="cart"></span>
+                <span class="cart-number">2</span>
+              </a>
+
+              <!--КОРЗИНА-->
+              <div class="cart-container cart-container-active">
+                <ul class="cart-list list-reset"></ul>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </header>
+
+    <main class="main">
+      <h1 class="visually-hidden">Интернет-магазин мороженного "Глейси"</h1>
+
+      <!--СЛАЙДЕР-->
+
+      <section class="slider">
+        <h2 class="visually-hidden">Промо-слайдер с популярным мороженным</h2>
+        <div class="container slider-container">
+          <ul class="slider-list list-reset">
+            <li class="slider-item slider-item-active">
+              <h3 class="visually-hidden">Товар 1.</h3>
+              <div class="slider-content">
+                <p class="title slider-title">Нежный пломбир с клубничным джемом</p>
+                <p class="text slider-text">Натуральное мороженое из свежих сливок
+                  и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
+                <a class="button button-light slider-button" href="#">Заказать</a>
+              </div>
+
+              <div class="slider-image">
+                <img src="" alt="Нежный пломбир с клубничным джемом" width="327.154px" height="507">
+                <img src="" alt="#" width="100" height="150">
+                <img src="" alt="#" width="100" height="150">
+
+              </div>
+
+            </li>
+          </ul>
+
+          <div class="slider-arrows-container">
+            <button class="slider-arrows slider-arrows-prev" type="button">
+              <span class="visually-hidden">Предыдущий товар</span>
+            </button>
+            <button class="slider-arrows slider-arrows-next" type="button">
+              <span class="visually-hidden">Следующий товар</span>
+            </button>
+          </div>
+          <!--СЛАЙДЕР Пагинация -->
+          <div class="bullets slider-bullets">
+            <ul class="bullets-list list-reset">
+              <li class="bullets-item active">
+                <button class="bullets-link bullets-link-active" type="button">
+                  <span class="visually-hidden">товар 1</span>
+                </button>
+              </li>
+              <li class="bullets-item">
+                <button class="bullets-link" type="button">
+                  <span class="visually-hidden">Товар 2</span>
+                </button>
+              </li>
+              <li class="bullets-item">
+                <button class="bullets-link" type="button">
+                  <span class="visually-hidden">Товар 3</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="social">
+            <ul class="social-list  list-reset">
+              <li class="social-item">
+                <a class="social-link social-link-telegram" href="https://t.me/htmlacademy" target="_blank">
+                  <span class="visually-hidden">Телеграм</span>
+                </a>
+              </li>
+              <li class="social-item">
+                <a class="social-link social-link-youtube" href="https://vk.com/htmlacademy" target="_blank">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </li>
+              <li class="social-item">
+                <a class="social-link social-link-twitter" href="https://www.youtube.com/user/htmlacademyru " target="_blank">
+                  <span class="visually-hidden">Youtube</span>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!--БАННЕРЫ-->
+
+      <section class="banner">
+        <h2 class="title banner-title">Заказывайте мороженое и получайте подарки!</h2>
+
+        <div class="banner-1">
+          <h3 class="subtitle banner-subtitle">Малинка даром!</h3>
+          <p class="text banner-text">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <a class="button button-light banner-button" href="#">Хочу подарок</a>
+        </div>
+        <div class="banner-2">
+          <h3 class="subtitle banner-subtitle">Маршмеллоу даром!</h3>
+          <p class="text banner-text">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <a class="button button-light banner-button" href="#">Хочу подарок</a>
+        </div>
+
+      </section>
+
+      <!--ПРОМО ТОВАРЫ-->
+
+      <section class="promo"></section>
+
+      <!--O МАГАЗИНЕ-->
+
+      <section class="about"></section>
+
+      <!--РАССЫЛКА-->
+
+      <section class="subscribe"></section>
+
+      <!--ДОСТАВКА-->
+
+      <section class="delivery"></section>
+
+      <!--КОНТАКТЫ-->
+
+      <section class="contacts"></section>
+
+    </main>
+
+    <!--ФУТЕР-->
+
+    <footer class="page-footer"></footer>
 
   </body>
+
 </html>
