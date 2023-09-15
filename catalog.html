@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог мороженого</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+
+  <body>
+    <div class="wrapper wrapper-basic">
+
+      <header class="header-page">
+        <div class="container header-container">
+          <nav class="nav">
+            <a class="nav-logo logo" href="index.html" aria-current="page">
+              <img src="images/logo.svg" alt="Логотип «Глейси»." width="137" height="56">
+            </a>
+
+            <ul class="nav-list list-reset">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-link" href="#">Каталог</a>
+                <div class="dropdown-menu dropdown-container">
+                  <h2 class="dropdown-menu-title">Новинки</h2>
+                  <ul class="dropdown-menu-list list-reset">
+                    <li class="dropdown-menu-item">
+                      <a class="dropdown-menu-link dropdown-menu-link-current" href="catalog.html" aria-current="page">Сливочное</a>
+                    </li>
+
+                    <li class="dropdown-menu-item">
+                      <a class="dropdown-menu-link" href="#">Щербеты</a>
+                    </li>
+
+                    <li class="dropdown-menu-item">
+                      <a class="dropdown-menu-link" href="#">Фруктовый лёд</a>
+                    </li>
+
+                    <li class="dropdown-menu-item">
+                      <a class="dropdown-menu-link" href="#">Мелорин</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Доставка и оплата</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">О компании</a>
+              </li>
+            </ul>
+
+            <a class="navigation-phone" href="tel:+78005558628">+7&nbsp;800&nbsp;555-86-28</a>
+
+            <ul class="user-list list-reset">
+              <li class="user-item user-item-search dropdown">
+                <a class="user-link user-link-search dropdown-link" href="#">
+                  <span class="visually-hidden">Поиск</span>
+                  <!--SVG-->
+                </a>
+                <div class="search dropdown-container">
+                  <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                    <label class="visually-hidden" for="search">Поиск.</label>
+                    <input class="search-input form-input" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
+                    <button class="visually-hidden" type="submit">Поиск.</button>
+                  </form>
+                </div>
+              </li>
+
+              <!-- Класс dropdown-show откроет блок с формой входа -->
+              <li class="user-item user-item-login dropdown">
+                <a class="user-link user-link-login dropdown-link" href="#">
+                  <!--SVG-->
+                  <span class="enter">Вход</span>
+                </a>
+                <div class="login dropdown-container">
+                  <h2 class="dropdown-title small-title login-title">Личный кабинет</h2>
+                  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                    <label class="visually-hidden" for="email">Введите вашу почту</label>
+                    <input class="login-input form-input" type="email" id="email" name="email" placeholder="Ваш email" value="email@example.com" required>
+                    <label class="visually-hidden" for="password">Введите ваш пароль</label>
+                    <input class="login-input form-input" type="password" id="password" name="password" placeholder="Ваш пароль" value="******" required>
+
+                    <div class="login-wrapper">
+                      <button class="button button-light login-button" type="submit">Войти</button>
+                      <div class="login-wrapper-links">
+                        <a class="login-link" href="#">Забыли пароль?</a>
+                        <a class="login-link" href="#">Регистрация</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </li>
+
+              <!-- Класс dropdown-show dropdown-basket-full открывает всплывающее окно c полной корзиной-->
+              <!-- Класс dropdown-show dropdown-basket-empty открывает всплывающее окно c пустой корзиной-->
+              <li class="user-item user-item-basket dropdown dropdown-basket-full">
+                <a class="user-link user-link-basket dropdown-link" href="#" aria-label="В Корзине:">
+                  <!--SVG-->
+                  <span class="basket-number">2</span>
+                </a>
+
+                <!--КОРЗИНА-->
+                <div class="basket dropdown-container">
+                  <div class="basket-content basket-content-empty">
+                    <h2 class="basket-title small-title dropdown-title">Ваша корзина пока пуста</h2>
+                  </div>
+
+                  <div class="basket-content basket-content-full">
+                    <h2 class="basket-title small-title dropdown-title">Корзина</h2>
+
+                    <ul class="basket-list list-reset">
+                      <li class="basket-item">
+                        <a class="basket-link" href="#">
+                          <img src="images/product/photo-1.jpg" width="46" height="46" alt="мороженое Малинка">
+                          <h3 class="basket-subtitle small-subtitle">Малинка</h3>
+                          <span class="basket-desc">1&nbsp;кг&nbsp;х&nbsp;310&nbsp;₽</span>
+                        </a>
+
+                        <span class="basket-price">310&nbsp;₽</span>
+
+                        <button class="basket-delete" type="button">
+                          <span class="visually-hidden">Удалить из корзины</span>
+                        </button>
+                      </li>
+
+                      <li class="basket-item">
+                        <a class="basket-link" href="#">
+                          <img src="images/product/photo-4.jpg" width="46" height="46" alt="мороженое Бабл-гам">
+                          <h3 class="basket-subtitle small-subtitle">Бабл-гам</h3>
+                          <span class="basket-desc">1,5&nbsp;кг&nbsp;х&nbsp;320&nbsp;₽</span>
+                        </a>
+
+                        <span class="basket-price">480&nbsp;₽</span>
+
+                        <button class="basket-delete" type="button">
+                          <span class="visually-hidden">Удалить из корзины</span>
+                        </button>
+                      </li>
+                    </ul>
+                    <div class="basket-check">
+                      <a class="button button-light basket-button" href="#">Оформит заказ</a>
+                      <span class="basket-total">Итого:&nbsp;790&nbsp;₽</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
