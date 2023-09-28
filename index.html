@@ -150,7 +150,7 @@
                       </li>
                     </ul>
                     <div class="basket-check">
-                      <a class="button button-light basket-button" href="#">Оформит заказ</a>
+                      <a class="button button-light basket-button" href="#">Оформить заказ</a>
                       <span class="basket-total">Итого:&nbsp;790&nbsp;₽</span>
                     </div>
                   </div>
@@ -557,6 +557,34 @@
           </div>
         </div>
       </footer>
+
+      <!--Модальное окно-->
+      <dialog class="modal-window">
+        <div class="modal-wrapper">
+          <button class="button-modal-close" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+
+          <section class="modal">
+            <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+
+            <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+              <label class="visually-hidden" for="name">Имя и фамилия</label>
+              <input class="modal-input" type="text" id="name" name="name" placeholder="Имя и фамилия" required>
+
+              <label class="visually-hidden" for="email">Email</label>
+              <input class="modal-input" type="email" id="email" name="email" placeholder="email@example.com" required>
+
+              <textarea class="modal-input" name="message" placeholder="В свободной форме"></textarea>
+
+              <button class="modal-button button button-light" type="submit">Отправить</button>
+            </form>
+
+          </section>
+
+        </div>
+
+      </dialog>
 
     </div>
   </body>

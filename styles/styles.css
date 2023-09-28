@@ -763,6 +763,21 @@ img {
   opacity: 0.4;
 }
 
+.slider-image-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+
+  width: 100px;
+  height: 100px;
+
+  background-color: #ffcbd8;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .slider-image-container img {
   position: relative;
   z-index: 2;
@@ -776,6 +791,13 @@ img {
 .slider-image-container-active {
   width: 367px;
   height: 507px;
+
+  opacity: 1;
+}
+
+.slider-image-container-active::before {
+  width: 327px;
+  height: 312px;
 
   opacity: 1;
 }
@@ -1268,6 +1290,24 @@ img {
 
 textarea .delivery-form-input {
   resize: none;
+}
+
+.delivery-tooltip-toggle {
+  width: 14px;
+  height: 14px;
+
+  background-color: transparent;
+  background-image: url("../images/icons/tooltip.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.delivery-tooltip:hover .delivery-tooltip-text,
+.delivery-tooltip:focus-within .delivery-tooltip-text {
+  display: block;
 }
 
 .delivery-button {
