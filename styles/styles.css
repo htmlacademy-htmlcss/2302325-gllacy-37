@@ -140,8 +140,12 @@ img {
   box-shadow: 0 4px 15px rgba(133, 133, 133, 0.15), 0 0 0 4px #fcfcfc;
 }
 
-.button:focus {
+.button:focus,
+.button:focus-visible {
+  color: #2d3440;
+
   background-color: rgba(252, 252, 252, 0.5);
+  outline: none;
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1), 0 0 0 2px #2d3440;
 }
 
@@ -235,7 +239,8 @@ img {
   box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.3);
 }
 
-.button-outline:focus {
+.button-outline:focus,
+.button-outline:focus-visible {
   background-color: rgba(252, 252, 252, 0.3);
   outline: none;
   box-shadow: 0 0 0 2px #2d3440;
@@ -307,7 +312,7 @@ img {
   border-radius: 4px;
 }
 
-textarea .form-input {
+textarea.form-input {
   padding: 12px 15px;
 
   resize: none;
@@ -323,6 +328,7 @@ textarea .form-input {
   border: 1px solid #2d3440;
 }
 
+.form-input:focus,
 .form-input:focus-visible {
   border: 1px solid #2d3440;
   outline: none;
@@ -352,6 +358,14 @@ textarea .form-input {
   padding: 24px 0;
 }
 
+.nav {
+  display: grid;
+  align-items: start;
+
+  gap: 18px;
+  grid-template-columns: auto minmax(500px, 1fr) auto auto;
+}
+
 .logo {
   display: block;
   width: 137px;
@@ -360,10 +374,6 @@ textarea .form-input {
 
 .logo[aria-current] {
   pointer-events: none;
-}
-
-.nav-logo {
-  margin-right: 16px;
 }
 
 .logo:hover {
@@ -380,7 +390,7 @@ textarea .form-input {
   opacity: 0.6;
 }
 
-logo:active {
+.logo:active {
   opacity: 0.5;
 }
 
@@ -388,14 +398,6 @@ logo:active {
   display: block;
   width: 100%;
   height: 100%;
-}
-
-.nav {
-  display: grid;
-  align-items: start;
-
-  gap: 18px;
-  grid-template-columns: repeat(4, auto);
 }
 
 .nav-list {
@@ -422,14 +424,15 @@ logo:active {
   transition: background-color 0.3s ease-in;
 }
 
+.nav-link[aria-current] {
+  pointer-events: none;
+}
+
 .nav-link:hover {
   background-color: rgba(252, 252, 252, 0.5);
 }
 
-.nav-link:focus {
-  outline: none;
-}
-
+.nav-link:focus,
 .nav-link:focus-visible {
   background-color: rgba(255, 255, 255, 0.5);
   border-color: #2d3440;
@@ -480,7 +483,7 @@ logo:active {
 .dropdown-link {
   position: relative;
 
-  padding-right: 40px;
+  padding-right: 37px;
 }
 
 .nav-link.dropdown-link::after {
@@ -536,10 +539,7 @@ logo:active {
   background-color: #ffcbd8;
 }
 
-.dropdown-menu-link:focus {
-  outline: none;
-}
-
+.dropdown-menu-link:focus,
 .dropdown-menu-link:focus-visible {
   background-color: #ffcbd8;
   outline: none;
@@ -553,10 +553,12 @@ logo:active {
   color: #fcfcfc;
 
   background-color: #ff4a78;
+
+  pointer-events: none;
 }
 
 .nav-phone {
-  margin-top: 16px;
+  margin-top: 18px;
 
   font-weight: 700;
   color: #2d3440;
@@ -569,7 +571,8 @@ logo:active {
   color: #fcfcfc;
 }
 
-.nav-phone:focus {
+.nav-phone:focus .nav-phone:focus-visible {
+  outline: none;
   opacity: 0.6;
 }
 
@@ -581,10 +584,10 @@ logo:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  max-width: 290px;
+  max-width: 300px;
   margin-top: 4px;
 
-  gap: 17px;
+  gap: 15px;
 }
 
 .user-item {
@@ -610,18 +613,16 @@ logo:active {
   background-color: rgba(252, 252, 252, 0.5);
 }
 
-.user-link:focus {
-  outline: none;
-}
-
+.user-link:focus,
 .user-link:focus-visible {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(252, 252, 252, 0.5);
   border: 2px solid #2d3440;
   outline: none;
 }
 
 .user-link:active {
   background-color: #fcfcfc;
+  border-color: transparent;
 }
 
 .user-link span {
@@ -688,7 +689,9 @@ logo:active {
   opacity: 0.3;
 }
 
-.login-link:focus {
+.login-link:focus,
+.login-link:focus-visible {
+  outline: none;
   opacity: 0.6;
 }
 
@@ -747,7 +750,9 @@ logo:active {
   opacity: 0.3;
 }
 
-.basket-link:focus {
+.basket-link:focus,
+.basket-link:focus-visible {
+  outline: none;
   opacity: 0.6;
 }
 
@@ -794,7 +799,9 @@ logo:active {
   opacity: 0.3;
 }
 
-.basket-delete:focus {
+.basket-delete:focus,
+.basket-delete:focus-visible {
+  outline: none;
   opacity: 0.6;
 }
 
@@ -874,6 +881,7 @@ logo:active {
   margin: 0 0 24px;
 
   font-size: 36px;
+  text-align: left;
 }
 
 .slider-text {
@@ -1086,7 +1094,6 @@ logo:active {
 
   border-radius: 50%;
   box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.3);
-  opacity: 1;
 }
 
 .social-link svg {
@@ -1157,8 +1164,10 @@ logo:active {
   margin-top: auto;
 }
 
-.product-container {
-  padding-bottom: 26px;
+.product-page .product-container {
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid rgba(252, 252, 252, 0.3);
 }
 
 .product-title {
@@ -1168,7 +1177,7 @@ logo:active {
 .product-list {
   display: grid;
 
-  gap: 40px 30px;
+  gap: 39px 30px;
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -1212,6 +1221,7 @@ logo:active {
 
 .product-link-img:focus,
 .product-link-img:focus-visible {
+  outline: none;
   opacity: 0.7;
 }
 
@@ -1233,6 +1243,7 @@ logo:active {
 
 .product-link:focus,
 .product-link:focus-visible {
+  outline: none;
   opacity: 0.7;
 }
 
@@ -1244,7 +1255,7 @@ logo:active {
   margin: 0;
 }
 
-.product-text {
+.product-desc {
   margin: 0 0 16px;
 
   line-height: 22px;
@@ -1324,8 +1335,8 @@ logo:active {
 .about-container {
   padding: 24px;
 
-  background-color: #ffffff;
-  background-image: url("..//images/waffle.jpg");
+  background-color: #f0e4cb;
+  background-image: url("../images/waffle.png");
   background-size: cover;
   border-radius: 16px;
 }
@@ -1356,11 +1367,11 @@ logo:active {
   color: #565c66;
 
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: top left;
 }
 
 .about-item-ice-cream {
-  background-image: url(../images/icons/icecream.svg);
+  background-image: url("../images/icons/icecream.svg");
 }
 
 .about-item-cow {
@@ -1385,7 +1396,7 @@ logo:active {
 
 .news {
   height: 100%;
-  padding: 33px 220px 33px 32px;
+  padding: 27px 220px 33px 32px;
 
   background-color: #ffffff;
   background-image: url("../images/fon-icecream.jpg");
@@ -1396,7 +1407,7 @@ logo:active {
 }
 
 .news-title {
-  margin: 0 0 12px;
+  margin: 0 0 9px;
 
   font-weight: 400;
   font-size: 16px;
@@ -1417,6 +1428,7 @@ logo:active {
 
 .news-link:focus,
 .news-link:focus-visible {
+  outline: none;
   opacity: 0.7;
 }
 
@@ -1427,7 +1439,7 @@ logo:active {
 .subscribe {
   padding: 6px;
 
-  background-image: url(../images/fon-mail.jpg);
+  background-image: url("../images/fon-mail.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
@@ -1437,7 +1449,7 @@ logo:active {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 26px;
+  padding: 26px 27px 28px;
 
   background-color: #ffffff;
   border-radius: 16px;
@@ -1461,7 +1473,7 @@ logo:active {
 
 .subscribe-submit {
   width: 156px;
-  padding: 15px;
+  padding: 12px 15px;
 }
 
 .delivery-container {
@@ -1471,7 +1483,7 @@ logo:active {
   column-gap: 92px;
 
   background-color: #fcfcfc;
-  background-image: url("../images/fon-delivery.jpg");
+  background-image: url("../images/delivery-background.jpg");
   background-repeat: no-repeat;
   background-position: center right;
   background-size: cover;
@@ -1492,7 +1504,7 @@ logo:active {
 }
 
 .delivery-desc {
-  margin: 0 0 28px;
+  margin: 0;
 
   line-height: 22px;
   color: #565c66;
@@ -1504,6 +1516,10 @@ logo:active {
   background-color: #fcfcfc;
   border-radius: 8px;
   box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+}
+
+.delivery-form-container .delivery-desc {
+  margin-bottom: 28px;
 }
 
 .delivery-form {
@@ -1579,10 +1595,6 @@ logo:active {
   border-top: none;
   border-right: none;
   transform: rotate(45deg);
-}
-
-textarea .delivery-form-input {
-  resize: none;
 }
 
 .delivery-tooltip-toggle {
@@ -1669,6 +1681,7 @@ textarea .delivery-form-input {
 
 .contacts-phone:focus,
 .contacts-phone:focus-visible {
+  outline: none;
   opacity: 0.7;
 }
 
@@ -1794,6 +1807,7 @@ textarea .delivery-form-input {
   line-height: 20px;
   font-family: "Inter", "Arial", sans-serif;
   color: #2d3440;
+  text-transform: lowercase;
 
   background-color: rgba(252, 252, 252, 0.3);
   background-image: url("../images/icons/arrow-down.svg");
@@ -1814,6 +1828,7 @@ textarea .delivery-form-input {
   background-color: rgba(252, 252, 252, 0.5);
 }
 
+.filter-select:focus,
 .filter-select:focus-visible {
   background-color: rgba(252, 252, 252, 0.4);
   border-color: #fcfcfc;
@@ -1856,6 +1871,12 @@ textarea .delivery-form-input {
 .range-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   appearance: none;
+}
+
+.range-input:hover {
+  color: #fcfcfc;
+
+  outline: none;
 }
 
 .range-input:focus,
@@ -1958,12 +1979,14 @@ textarea .delivery-form-input {
   background-color: #2d3440;
 }
 
+.filter-range-toggle:focus,
 .filter-range-toggle:focus-visible {
   background-color: #fcfcfc;
   outline: none;
   box-shadow: 0 0 0 2px #2d3440;
 }
 
+.filter-range-toggle:focus::after,
 .filter-range-toggle:focus-visible::after {
   background-color: #2d3440;
 }
@@ -2109,8 +2132,8 @@ textarea .delivery-form-input {
 
   background-color: #2d3440;
 
-  -webkit-mask-image: url(../images/icons/checkbox.svg);
-  mask-image: url(../images/icons/checkbox.svg);
+  -webkit-mask-image: url("../images/icons/checkbox.svg");
+  mask-image: url("../images/icons/checkbox.svg");
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
@@ -2118,14 +2141,20 @@ textarea .delivery-form-input {
 }
 
 .filter-input-check:checked:after {
-  -webkit-mask-image: url(../images/icons/checkbox-on.svg);
-  mask-image: url(../images/icons/checkbox-on.svg);
+  -webkit-mask-image: url("../images/icons/checkbox-on.svg");
+  mask-image: url("../images/icons/checkbox-on.svg");
 }
 
+.filter-input-check:hover::after {
+  background-color: #fcfcfc;
+}
+
+.filter-input-check:focus,
 .filter-input-check:focus-visible {
   outline: none;
 }
 
+.filter-input-check:focus::after,
 .filter-input-check:focus-visible::after {
   background-color: #fcfcfc;
 }
@@ -2155,7 +2184,7 @@ textarea .delivery-form-input {
 .pagination {
   position: relative;
 
-  padding: 54px 0;
+  padding: 55px 216px 60px 200px;
 
   text-align: center;
 }
@@ -2187,7 +2216,7 @@ textarea .delivery-form-input {
   align-items: center;
   min-width: 24px;
   min-height: 24px;
-  padding: 2px;
+  padding: 0 2px;
 
   color: inherit;
   text-decoration: none;
@@ -2326,7 +2355,7 @@ textarea .delivery-form-input {
   opacity: 0.3;
 }
 
-.htmlacademy-link:focus {
+.htmlacademy-link:focus .htmlacademy-link:focus-visible {
   outline: none;
   opacity: 0.7;
 }
@@ -2351,7 +2380,8 @@ textarea .delivery-form-input {
   opacity: 0.3;
 }
 
-.htmlacademy-info:focus a {
+.htmlacademy-info:focus a,
+.htmlacademy-info:focus-visible a {
   outline: none;
   opacity: 0.7;
 }
@@ -2397,6 +2427,7 @@ textarea .delivery-form-input {
   position: absolute;
   top: 27px;
   right: 27px;
+  z-index: 1;
 
   width: 30px;
   height: 30px;
